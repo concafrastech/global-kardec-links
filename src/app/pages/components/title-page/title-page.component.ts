@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
-import { MenuItem } from 'primeng/api';
-
+// Service
+import {TitlePageService} from "../../../services/title-page/title-page.service";
+// PrimeNg
+import {MenuItem} from 'primeng/api';
 import {MenubarModule} from "primeng/menubar";
 
 @Component({
@@ -14,9 +16,14 @@ import {MenubarModule} from "primeng/menubar";
   styleUrl: './title-page.component.less'
 })
 export class TitlePageComponent implements OnInit {
+
   items: MenuItem[] | undefined;
 
+  constructor(private titlePageService: TitlePageService) {
+  }
+
   ngOnInit() {
+
     this.items = [
       {
         label: 'Home',
@@ -33,5 +40,12 @@ export class TitlePageComponent implements OnInit {
 
       }
     ]
+  }
+
+  get titlePage(): string {
+    return <string>this.titlePageService.HeaderData.titlePage
+  }
+  get subTitle(): string {
+    return <string>this.titlePageService.HeaderData.subTitle
   }
 }

@@ -1,33 +1,34 @@
 import {Component, Directive, OnInit} from '@angular/core';
-
-// Componentes
-import {TitlePageComponent} from "../components/title-page/title-page.component";
-import {BtnZoomComponent} from "../components/btn-zoom/btn-zoom.component";
-
 // Prime Ng
 import {MessagesModule} from "primeng/messages";
-import { Message } from 'primeng/api';
+import {Message} from 'primeng/api';
 
+// Componentes
+import {BtnZoomComponent} from "../components/btn-zoom/btn-zoom.component";
 
-
+// Service
+import {TitlePageService} from "../../services/title-page/title-page.service";
 
 @Component({
   selector: 'app-roms-links',
   standalone: true,
   imports: [
-    TitlePageComponent,
     BtnZoomComponent,
     MessagesModule
   ],
   templateUrl: './roms-links.component.html',
-  styleUrl: './roms-links.component.less'
+  styleUrl: './roms-links.component.less',
 })
-export class RomsLinksComponent implements OnInit {
-  messages: Message[] = [];
+export class RomsLinksComponent{
+  messages: Message[] = [{
+    severity: 'info',
+    detail: 'Atenção, das 17:30 às 18:00 todos nos encontraremos no auditório'
+  }];
 
-  ngOnInit() {
-    this.messages = [
-      { severity: 'info', detail: 'Atenção, das 17:30H as 17:50H todos nos encontraremos no auditório' },
-    ];
+  constructor(private titlePageService: TitlePageService) {
+    titlePageService.HeaderData = {
+      titlePage:'Global Kardec - Online',
+      subTitle: 'Caso o Zoom solicite Senha de acesso: <span>100</span>',
+    }
   }
 }
