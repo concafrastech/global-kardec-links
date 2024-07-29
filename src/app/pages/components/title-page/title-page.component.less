@@ -1,0 +1,30 @@
+@import "@styles/_global.less";
+.title-box {
+  background-image: url(https://allankardeconline.com/assets/images/nuvens.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  position: relative;
+  padding: @indent__l 0 @indent__base * 5 0;
+
+  .page-title-wrapper {
+    text-align: center;
+    color: @color-white;
+
+    .page-title {
+      font-size: @h2__font-size + @h5__font-size;
+      font-family: 'Marcellus', serif;
+      font-weight: @font-weight__heavier;
+      margin-bottom: @indent__m;
+    }
+
+    .page-subtitle {
+      font-size: @h4__font-size;
+      font-weight: @font-weight__heavier;
+      margin-top: unset;
+
+      span {
+        color: @theme__color__secondary-yellow;
+      }
+    }
+  }
+}

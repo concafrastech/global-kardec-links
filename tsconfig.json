@@ -21,7 +21,12 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@styles/*": ["assets/css/concafras-style/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

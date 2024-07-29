@@ -1,3 +1,16 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
-export const routes: Routes = [];
+// Components
+import {RomsLinksComponent} from "./pages/roms-links/roms-links.component";
+import {NotFoundComponent} from "./pages/not-found/not-found.component";
+
+export const routes: Routes = [
+  {
+    path: "global-kardec-brasil",
+    component: RomsLinksComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  },
+];

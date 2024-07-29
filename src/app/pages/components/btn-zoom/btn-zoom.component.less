@@ -1,0 +1,17 @@
+@import "@styles/_global.less";
+
+.btn-zoom {
+  .mixin-display(flex);
+  .mixin-display-flex-wrap(wrap);
+  .mixin-flex-justify-content(center);
+  text-decoration: none;
+
+  &:hover {
+    background-color: @color-black;
+  }
+
+  .zoom-image {
+    width: 120px;
+    height: 40px;
+  }
+}

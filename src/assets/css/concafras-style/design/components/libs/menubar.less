@@ -1,0 +1,98 @@
+@import "../theme.less";
+
+.mixin-menubar-styles(
+  @align-items: center;
+  @justify-content: center;
+  @border-menubar:none;
+  @background-color-menubar: @theme__color__primary;
+  @color-menuitem-text: @color-white;
+  @background-menuitem-content: transparent;
+  @color-menuitem-hover: @color--black;
+  @background-color-menuitem-hover: @theme__color__secondary-yellow;
+  @menuitem-text-font-size: @font-size__base + 1;
+  @menuitem-text-font-weight: @font-weight__semibold;
+  @menuitem-link-padding:@indent__x;
+  @color-menubar-button-mobile: @color-white;
+  @menu-icon-size:@indent__m;
+) {
+  .p-menubar {
+    background: @background-color-menubar;
+    border: @border-menubar;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .screen-custom({
+      justify-content: end;
+
+      .p-menubar-button {
+        color: @color-menubar-button-mobile;
+
+        &:hover {
+          background: transparent;
+        }
+
+        .p-icon {
+          width: @menu-icon-size;
+          height: @menu-icon-size;
+        }
+      }
+    }, 960px);
+
+    .p-element {
+      .p-menubar-root-list {
+        justify-content: @justify-content;
+        align-items: @align-items;
+        width: 100%;
+
+        .screen-custom({
+          background-color: @background-color-menubar;
+        }, 960px);
+
+        > .p-menuitem {
+          margin: 0 3px 0 3px;
+
+          > .p-menuitem-content {
+            background: @background-menuitem-content;
+
+            &:hover {
+              background-color: @background-color-menuitem-hover;
+            }
+
+            .p-menuitem-link {
+              padding: @menuitem-link-padding;
+
+              .p-menuitem-icon {
+              }
+
+              .p-menuitem-text {
+                color: @color-menuitem-text;
+                font-weight: @menuitem-text-font-weight;
+                font-size: @menuitem-text-font-size;
+
+                &:hover {
+                  color: @color-menuitem-hover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .p-menubar-start {
+      position: absolute;
+      left: 0;
+    }
+
+    .p-menubar-end {
+      margin: unset;
+    }
+  }
+
+
+}
+
+;
+
+.mixin-menubar-styles();

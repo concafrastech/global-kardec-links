@@ -1,0 +1,115 @@
+@import "@styles/_global.less";
+
+.roms-link {
+  @scream-mobile: 768px;
+  background-color: @color-white;
+  width: 100%;
+  padding-bottom: @indent__l;
+
+  .box {
+    .mixin-display(flex);
+    .screen-custom({
+      .mixin-display-flex-direction(column);
+    }, @scream-mobile);
+
+    &-image {
+      display: flex;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 41.66666667%;
+
+      .img-fluid {
+        border-radius: @indent__m;
+        width: 440px;
+      }
+
+      .screen-custom({
+        width: 100%;
+      }, @scream-mobile);
+
+    }
+
+    &-description {
+
+      &__title {
+        font-family: 'Marcellus', serif;
+        font-size: @h2__font-size;
+        font-weight: @font-weight__heavier;
+        margin: unset;
+
+        .screen-custom({
+          font-size: @h4__font-size;
+          text-align: center;
+        }, @scream-mobile);
+      }
+
+      &__subtitle {
+        font-weight: @font-weight__heavier;
+        color: @theme__color__secondary-yellow;
+        margin: unset;
+        .screen-custom({
+          font-size: @h6__font-size;
+          text-align: center;
+        }, @scream-mobile);
+      }
+
+      &__info {
+        font-size: @font-size__l;
+        font-weight: @font-weight__regular;
+        .screen-custom({
+          font-size: @h6__font-size;
+          text-align: center;
+        }, @scream-mobile);
+      }
+
+      .btn-zoom {
+        .mixin-display(flex);
+        .mixin-display-flex-wrap(wrap);
+        .mixin-flex-justify-content(center);
+        text-decoration: none;
+
+        &:hover {
+          background-color: @color-black;
+        }
+
+        .zoom-image {
+          width: 120px;
+          height: 40px;
+        }
+      }
+
+    }
+  }
+
+  .ciclo-introdutorio {
+    .row {
+      .screen-custom({
+        .mixin-display-flex-direction(column);
+
+      }, @scream-mobile);
+
+      div {
+        .mixin-display();
+        .mixin-display-flex-direction(column);
+        .mixin-flex-justify-content(space-between);
+        .mixin-display-flex-box-align(center);
+
+        .mixin-gap(@indent__xxs);
+
+        .screen-medium-custom(
+        {
+          flex: 0 0 50%;
+          max-width: 50%;
+        },@scream-mobile, @breakpoint-xl);
+        //
+        //  .screen-custom({
+        //  flex: 0 0 50%;
+        //  max-width: 50%;
+        //}, @breakpoint-xl);
+
+      }
+      }
+    }
+
+
+  }
