@@ -11,7 +11,7 @@ No arquivo `tsconfig.json`, você deve configurar os aliases corretamente. A con
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@styles/*": ["assets/css/concafras-style/*"]
+      "@concafras/*": ["assets/css/concafras-style/*"]
     }
   }
 }
@@ -50,7 +50,7 @@ Após configurar os aliases, você pode usar os aliases nas suas importações L
 #### Arquivo LESS:
 
 ```less
-@import "@styles/_global.less";
+@import "@concafras/_global.less";
 ```
 
 ### Passos Detalhados:
@@ -90,7 +90,7 @@ src/
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@styles/*": ["assets/css/concafras-style/*"]
+      "@concafras/*": ["assets/css/concafras-style/*"]
     }
   }
 }
@@ -121,7 +121,7 @@ src/
 #### Arquivo LESS (`title-page.component.less`):
 
 ```less
-@import "@styles/_global.less";
+@import "@concafras/_global.less";
 ```
 
 ### Reiniciar o Servidor

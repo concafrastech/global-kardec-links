@@ -25,7 +25,7 @@
     "baseUrl": "src",
     "paths": {
       "@assets/*": ["assets/*"],
-      "@styles/*": ["assets/css/concafras-style/*"]
+      "@concafras/*": ["assets/css/concafras-style/*"]
     }
   },
   "angularCompilerOptions": {
