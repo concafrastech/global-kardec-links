@@ -13,8 +13,8 @@
     }, @scream-mobile);
 
     &-image {
-      display: flex;
-      justify-content: center;
+      .mixin-display(flex);
+      .mixin-flex-justify-content(center);
       flex: 0 0 auto;
       width: 41.66666667%;
 
@@ -81,12 +81,14 @@
     }
   }
 
-  .ciclo-introdutorio {
+  .ciclo-introdutorio,.ciclo-especializacao {
     .row {
-      .screen-custom({
-        .mixin-display-flex-direction(column);
+      .screen-medium-custom(
+      {
+        .mixin-display-flex-direction(row);
 
-      }, @scream-mobile);
+      },375px, @breakpoint-xl);
+
 
       div {
         .mixin-display();
@@ -95,17 +97,12 @@
         .mixin-display-flex-box-align(center);
 
         .mixin-gap(@indent__xxs);
-
         .screen-medium-custom(
         {
           flex: 0 0 50%;
           max-width: 50%;
-        },@scream-mobile, @breakpoint-xl);
-        //
-        //  .screen-custom({
-        //  flex: 0 0 50%;
-        //  max-width: 50%;
-        //}, @breakpoint-xl);
+        },375px, @breakpoint-xl);
+
 
       }
       }
