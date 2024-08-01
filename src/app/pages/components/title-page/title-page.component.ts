@@ -38,10 +38,10 @@ export class TitlePageComponent implements OnInit {
         label: 'Global Kardec',
         url: 'https://allankardeconline.com/global-kardec'
       },
-      {
-        label: 'Salas de aula',
-        routerLink: 'global-kardec-brasil'
-      }
+      // {
+      //   label: 'Salas de aula',
+      //   routerLink: 'global-kardec-brasil'
+      // }
     ]
   }
 
