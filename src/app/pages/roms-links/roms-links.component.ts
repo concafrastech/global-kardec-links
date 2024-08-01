@@ -27,7 +27,7 @@ export class RomsLinksComponent{
 
   constructor(private titlePageService: TitlePageService) {
     titlePageService.HeaderData = {
-      titlePage:'Global Kardec - Online',
+      titlePage:'Global Kardec - Escola de Estudos Espíritas',
       subTitle: 'Caso o Zoom solicite Senha de acesso: <span>100</span>',
     }
   }

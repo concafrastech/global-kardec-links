@@ -1,0 +1,37 @@
+<main class="roms-link">
+  <div class="container">
+    <div class="row">
+      <p-messages [(value)]="messages" closable="false" />
+    </div>
+
+  </div>
+  <div class="box container">
+    <div class="row">
+      <div class="box-image col-6">
+        <a href="https://zoom.us/j/95626882769?pwd=WXBtMkc1QUl3Yzl6dm9meFlBb3V2dz09" target="_blank">
+          <img src="assets/img/autitorio.png" alt="" class="img-fluid img-responsive">
+        </a>
+      </div>
+      <div class="box-description col-6">
+        <h3 class="box-description__title">
+          Estamos te esperando no Auditório!
+        </h3>
+        <h4 class="box-description__subtitle">
+          VEM CANTAR CONOSCO!
+        </h4>
+        <p class="box-description__info">Entre primeiro no auditório</p>
+        <app-btn-zoom
+          [textButton]="'Sala do Auditório'"
+          [url]="'https://zoom.us/j/95626882769?pwd=WXBtMkc1QUl3Yzl6dm9meFlBb3V2dz09'"
+        ></app-btn-zoom>
+        <app-btn-youtube
+          [textButton]="'Acessar Transmissão'"
+          [url]="'https://youtube.com/live/grZdyWc6sYE?feature=share'"
+        ></app-btn-youtube>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+

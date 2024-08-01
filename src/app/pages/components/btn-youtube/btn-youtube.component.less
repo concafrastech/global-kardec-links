@@ -1,18 +1,22 @@
 @import "@concafras/_global.less";
 
-.btn-zoom {
+.p-button.btn-youtube {
   .mixin-display(flex);
   .mixin-display-flex-wrap(wrap);
   .mixin-flex-justify-content(center);
   text-decoration: none;
   font-size: @indent__m;
+  background-color: @color-red;
+  border: unset;
+  margin-top: @indent__s;
 
   &:hover {
     background-color: @color-black;
   }
 
-  .zoom-image {
+  .youtube-image {
     width: 120px;
     height: 40px;
+    margin-left: @indent__s;
   }
 }
