@@ -4,6 +4,7 @@ import {MessagesModule} from "primeng/messages";
 import {Message} from "primeng/api";
 import {TitlePageService} from "../../../services/title-page/title-page.service";
 import {BtnYoutubeComponent} from "../../components/btn-youtube/btn-youtube.component";
+import {OpenGraphComponent} from "../../../module/open-graph/open-graph/open-graph.component";
 
 @Component({
   selector: 'app-nbde-especial',
@@ -11,7 +12,8 @@ import {BtnYoutubeComponent} from "../../components/btn-youtube/btn-youtube.comp
   imports: [
     BtnZoomComponent,
     MessagesModule,
-    BtnYoutubeComponent
+    BtnYoutubeComponent,
+    OpenGraphComponent
   ],
   templateUrl: './nbde-especial.component.html',
   styleUrl: './nbde-especial.component.less'

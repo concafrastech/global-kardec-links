@@ -5,7 +5,6 @@ import {RomsLinksComponent} from "./pages/roms-links/roms-links.component";
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 import {NbdeEspecialComponent} from "./pages/rom-especial/nbde-especial/nbde-especial.component";
 import {RomEspecialComponent} from "./pages/rom-especial/rom-especial.component";
-import {EventComponent} from "./pages/event/event.component";
 
 export const routes: Routes = [
   {
@@ -22,7 +21,7 @@ export const routes: Routes = [
   },
   {
     path: "especial",
-    component: EventComponent
+    component: NbdeEspecialComponent
   },
   {
     path: '**',
