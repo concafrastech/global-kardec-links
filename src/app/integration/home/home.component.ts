@@ -124,15 +124,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   async getUser() {
     const request = {scopes: ["openid", "profile", "email"]};
-    // this.authInstanceService.acquireTokenSilent(request).subscribe({
-    //   next: async (response) => {
-    //     console.log(response);
-    //   },
-    //   error: error => console.error(error)
-    // });
-    // let headers = {
-    //   'Content-Type': 'application/json',
-    // };
+
     try {
       const account = this.authService.msalInstance.getAllAccounts()[0];
       if (!account) {
@@ -146,7 +138,7 @@ export class HomeComponent implements OnInit, OnDestroy {
               'Authorization': `Bearer ${accessToken}`
             });
 
-            this.http.get<any>(GRAPH_ENDPOINT, { headers: headers }).subscribe(profile => {
+            this.http.get<any>('https://graph.microsoft.com/v1.0/me/directReports', { headers: headers }).subscribe(profile => {
               console.log(profile);
             });
           },
